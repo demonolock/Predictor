@@ -82,6 +82,16 @@
                         <phase>generate-resources</phase>
                     </execution>
                     <execution>
+                        <id>npm angular install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>install @angular/cli</arguments>
+                        </configuration>
+                        <phase>generate-resources</phase>
+                    </execution>
+                    <execution>
                         <id>npm run-script prod</id>
                         <goals>
                             <goal>npm</goal>
