@@ -6,7 +6,7 @@
 
     <groupId>ru.dbzukunft.predictor</groupId>
     <artifactId>client</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
 
     <name>predictor-client</name>
     <description>Client part of the Predictor</description>
