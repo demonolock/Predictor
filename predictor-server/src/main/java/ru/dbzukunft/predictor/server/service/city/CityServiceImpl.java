@@ -21,8 +21,8 @@ public class CityServiceImpl implements CityService {
 
         List<City> foundedCities = cityRepository.findAll();
 
-        foundedCities.add(City.builder().title("1").build());
-        foundedCities.add(City.builder().title("2").build());
+        foundedCities.add(City.builder().title("City1").build());
+        foundedCities.add(City.builder().title("City2").build());
 
         if (foundedCities.isEmpty()) {
             return Collections.emptyList();
