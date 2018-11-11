@@ -7,6 +7,7 @@
   <groupId>ru.dbzukunft.predictor</groupId>
   <artifactId>client</artifactId>
   <version>1.0.0</version>
+  <packaging>pom</packaging>
 
   <name>predictor-client</name>
   <description>Client part of the Predictor</description>
@@ -16,7 +17,6 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <node.version>v8.12.0</node.version>
     <npm.version>6.4.1</npm.version>
-    <environment>prod</environment>
   </properties>
 
   <build>
@@ -34,22 +34,12 @@
             <phase>generate-resources</phase>
           </execution>
           <execution>
-            <id>install angular</id>
+            <id>npm install</id>
             <goals>
               <goal>npm</goal>
             </goals>
             <configuration>
-              <arguments>install @angular/cli</arguments>
-            </configuration>
-            <phase>generate-resources</phase>
-          </execution>
-          <execution>
-            <id>install bootstrap font-awesome </id>
-            <goals>
-              <goal>npm</goal>
-            </goals>
-            <configuration>
-              <arguments>install bootstrap font-awesome</arguments>
+              <arguments>install</arguments>
             </configuration>
             <phase>generate-resources</phase>
           </execution>
