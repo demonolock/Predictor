@@ -9,6 +9,7 @@ import ru.dbzukunft.predictor.server.util.dto.CityDTO;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -28,16 +29,11 @@ public class CityServiceImpl implements CityService {
             return Collections.emptyList();
         }
 
-        List<CityDTO> resultList = new ArrayList<>(foundedCities.size());
-
-        for (City city : foundedCities) {
-            CityDTO cityDTO = CityDTO.builder()
-                    .title(city.getTitle())
-                    .build();
-
-            resultList.add(cityDTO);
-        }
-
-        return resultList;
+        return foundedCities.stream()
+                .map(city -> CityDTO.builder()
+                        .title(city.getTitle())
+                        .build()
+                )
+                .collect(Collectors.toList());
     }
 }
